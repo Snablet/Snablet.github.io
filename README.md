@@ -1,2 +1,3 @@
 # Snablet.github.io
-HTML Project
+HTML / CSS / JS 
+Project CS4012
