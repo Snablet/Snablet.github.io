@@ -1,1 +1,34 @@
+/* remove default spacing and make the page 100% of user screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+/* logo */
+header {
+    text-align: center;
+    padding: 18px;
+    z-index: 2;         /* ensures header/logo is above dark overlay */
+    position: relative; /* for z-index */
+}
+
+/* container for the background below the logo */
+.backgroundContainer {
+    position: relative;  /* to give attribute from overlay */
+    width: 100vw;
+    height: calc(100vh - 65px - 36px); /* full screen - header height - padding */
+    background: url('../images/Background.jpg') center/cover no-repeat; /* center and keep aspect ratio and don't repeat*/
+    overflow: hidden; /* hide anything that spills outside */
+}
+
+/* dark semi-transparent overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.50);
+    pointer-events: none; /* allows clicks to pass */
+}
