@@ -46,7 +46,7 @@ header {
     position: relative;  /* to give attribute from overlay */
     width: 100vw;
     height: calc(100vh - 65px - 36px); /* full screen - header height - padding */
-    background: url('../images/Background.jpg') center/cover no-repeat; /* center and keep aspect ratio and don't repeat*/
+    background: url('../images/background.jpg') center/cover no-repeat; /* center and keep aspect ratio and don't repeat*/
     overflow: hidden; /* hide anything that spills outside */
 }
 
