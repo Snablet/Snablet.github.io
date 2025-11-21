@@ -8,19 +8,43 @@
 </head>
 
 
-
-
-
 <body>
 
 
-<header>
-    <img src="../images/Logo.png" alt="logo" style="max-height:65px; max-width:100%;">
+<header class="header">
+    <img src="../images/rev_car.jpg" alt="rev_car" class="revCar">
+    <img src="../images/playback-icon.png" alt="playback-icon" class="playback-icon" id="playback-icon">
+    <img src="../images/Logo.png" alt="logo" class="logo">
+
+    <audio id="car-revving" src="../media/car-revving.mp3"></audio>
 </header>
+
+<script>
+    const playbackIcon = document.getElementById("playback-icon");
+    const carRevving = document.getElementById("car-revving");
+
+    playbackIcon.style.cursor = "pointer";
+
+    playbackIcon.addEventListener("click", () => {
+        carRevving.play();
+    });
+</script>
 
 <div class="backgroundContainer">
     <div class="overlay"></div>
+
+    <h1 class="eventTitle">OPEN TRACK AND DRIFT GAMES DAY</h1>
+
+    <p class="eventDesc">Welcome to the Open Track and Drift Games Day – The ultimate drift party! 16 hours of non-stop track action across three epic layouts… Topped off with an after party not to not miss!</p>
+
+    <div class="boxContainer">
+        <a class="infoBox" href="#"><p class="boxTitle">Schedule</p></a>
+        <a class="infoBox" href="#"><p class="boxTitle">Location</p></a>
+        <a class="infoBox" href="#"><p class="boxTitle">Register</p></a>
+    </div>
 </div>
+
+
 
 
 </body>
