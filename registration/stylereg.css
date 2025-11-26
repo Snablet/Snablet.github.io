@@ -1,7 +1,7 @@
 .bg {
 	position: fixed;								/* dont scroll */
 	inset: 0;										/* stretch to fill */
-	background-image: url("images/IMG_8098.jpg");
+	background-image: url("images/IMG_8098down.jpg");
 	background-size: cover;
 	background-position: center;
 	filter: brightness(0.8);				/*darkening image to improve readability */
@@ -135,6 +135,9 @@ button:hover {
 }
 button:active {
 	transform: translateY(0px) scale(0.97);
+}
+#error {
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
 }
 
 /*animating (yayyy........) */
