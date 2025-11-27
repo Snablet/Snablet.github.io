@@ -18,5 +18,6 @@ document.getElementById("submit").addEventListener("click", () => {
     setTimeout(() => {
         thankyou.classList.add("show");
     }, 700);
+
 });
 
