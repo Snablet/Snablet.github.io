@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* header wrapper (centers everything + sits above overlay) */
+header {
+    text-align: center;
+    padding: 18px;
+    z-index: 2;         /* keeps header above dark overlay */
+    position: relative; /* allows z-index to work */
+}
+
+/* flex layout for the custom header version */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 69px;
+}
+
