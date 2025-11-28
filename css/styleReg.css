@@ -1,0 +1,180 @@
+.bg {
+	position: fixed;								/* dont scroll */
+	inset: 0;										/* stretch to fill */
+	background-image: url("../registration/images/IMG_8098down.jpg");
+	background-size: cover;
+	background-position: center;
+	filter: brightness(0.8);				/*darkening image to improve readability */
+	z-index: -1;									/* keeping it behind everything */
+	overflow: hidden;
+	transform: scale(1.1);							/* zooming in a bit to remove white edges */
+}
+
+.bigSexyGreyRectangle {
+
+	position: absolute;
+	top: 50%;				
+	left: 50%;		
+	transform: translate(-50%, -50%); /* keeps the box centered */
+	transition : opacity 0.7s ease; 	/* in prep for the animation */
+
+	width: 57%;
+	min-height: 55%;
+	height: auto;								/* fix for smaller monitors because that's apparently an issue that i realised exists the hard way */
+	background: rgba(255,255,255,0.06),;
+	backdrop-filter: blur(6px);
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.2), 0 10px 40px #00000050;
+	z-index: 1;
+}
+
+h1 {											/* registration text */
+	color: #ebebeb;
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+	font-size: 45px;
+	margin-bottom: 1px;
+
+	border-bottom: 3px solid #ebebeb;			/* bar under text */
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+p {											/* text below registration */
+	color: #ebebeb;
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+	font-size: 17px;
+	padding-bottom: 7px;
+	margin-top: 5px;
+}
+
+label {										/* text above fields */
+	color: #ebebeb;
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+	font-size: 20px;	
+}
+
+.nameFields {
+	display: flex;
+	justify-content: flex-start;
+	gap: 60px;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+	align-items: flex-end	;
+}
+
+.nameFields > .field {
+    flex: 1 1 45%;
+}
+
+.field input {
+	display: flex;
+    width: 100%;
+    box-sizing: border-box;   
+    flex-direction: column;
+}
+
+input {
+	font-size: 17px	;
+}
+
+textarea {
+	resize: none;
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+	font-size: 14px;
+	padding: 10px;
+	display: flex;
+	width: 100%;
+	min-height: 100px;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+.tos {
+	flex: 1 1 45%;
+	display: flex;
+	padding-top: 35px;
+	align-items: center;
+}
+
+.tos label {
+	font-size: 18px;
+}
+
+.tos a {
+	color: #4da3ff;
+}
+
+.tos a:visited {
+	color: #ffb266;
+}
+
+button {
+	background: rgba(255,255,255,0.15);
+	width: 210px;
+	height: 70px;
+	font-size: 20px;
+	color: #ebebeb;
+	border: 1px solid rgba(255,255,255,0.3);
+	margin-top: 30px;
+	cursor: pointer;
+	transition: transform 0.2s ease;			/* ease in when mouse leaves */
+	box-shadow: 0 0 6px rgba(255,255,255, 0.15);
+}
+
+button:hover {
+	transition: transform 0.2s ease;			
+	transform: scale(1.05);					/*ease out when hovering */
+}
+button:active {
+	transform: translateY(0px) scale(0.97);
+}
+#error {
+	font-family: "Poppins",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+}
+
+/*animating (yayyy........) */
+
+.thankyou {
+	opacity: 0;
+	transition: opacity 0.7s ease;				/* the actual animation */
+	position: absolute;
+	top: 50%;				
+	left: 50%;		
+	transform: translate(-50%, -50%);
+
+	width: 57%;
+	min-height: 55%;
+	height: auto;								
+	background: rgba(255,255,255,0.06),;
+	backdrop-filter: blur(6px);
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.2), 0 10px 40px #00000050;
+	z-index: 1;
+	pointer-events: none;						/* so it doesnt block mouse clicks */
+	z-index: 10;
+}
+
+#backHome {
+	position: absolute;
+	bottom: 40px;
+	left: 35px;
+}
+.thankyou.show {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.bigSexyGreyRectangle.fade-out {
+	opacity: 0;
+}
