@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Open Track & Drift Day — Mondello Park</title>
+  <style>
+    :root{
+      --overlay: rgba(6,8,15,0.55);
+      --accent: #00d4ff;
+      --max-width: 950px;
+    }
+    html,body{height:100%;margin:0;font-family: Inter, system-ui, -apple-system;}
+    .bg {
+      position: fixed;
+      inset:0;
+      background: center/cover no-repeat url('evetn-image.jpg.jpg');
+      z-index: -3;
+    }
+    .vignette{
+      position: fixed; inset:0;
+      background: radial-gradient(1200px 600px at 50% 30%, transparent 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.5) 80%);
+      z-index: -2;
+    }
+    .overlay{
+      position: fixed; inset:0;
+      background: var(--overlay);
+      display:flex;align-items:center;justify-content:center;
+      padding:8px;
+      box-sizing:border-box;
+      z-index: -1;
+      overflow-y:auto;
+    }
+    .container{
+      width:100%;max-width:var(--max-width);margin:0 auto;color:white;
+      display:block;
+    }
+    .logo{display:flex;gap:12px;align-items:center;font-weight:700;margin-bottom:20px;}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:#003a6b;display:flex;align-items:center;justify-content:center;font-size:18px}
+    .hero{padding:10px 0 30px;}
+    .eyebrow{font-size:13px;color:#fff;text-transform:uppercase;letter-spacing:1px;background:rgba(0,0,0,0.65);padding:6px 10px;border-radius:6px;display:inline-block;text-shadow:0 0 4px #000;}
+    h1{color:#fff;text-shadow:0 0 8px #000,0 0 4px #000;font-size:48px;margin:20px 0;}
+    p.lead{color:rgba(255,255,255,0.85);margin:0 0 18px;max-width:75%}
+    .card{
+      background:rgba(255,255,255,0.05);
+      border-radius: 0;padding:8px;margin-bottom:30px;
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
+    footer{margin-top:28px;color:rgba(255,255,255,0.6);font-size:13px;text-align:center}
+
+    /* Schedule Table */
+    .schedule{margin-top:20px;}
+    .schedule h2{color:#fff;text-shadow:0 0 6px #000,0 0 3px #000;font-size:26px;}
+    table{width:100%;border-collapse:collapse;background:transparent;border-radius:0;overflow:hidden;}
+    th,td{padding:12px 14px;text-align:left;border-bottom:none;}
+    th{padding:12px 14px;text-align:left;background:transparent;font-size:14px;border-bottom:none;}
+    tr:nth-child(even){}
+    td.time{color:#ff6961;font-weight:600;}
+
+  .schedule {transform: scale(0.85); transform-origin: top left;}
+
+.schedule-wrapper {
+  transform: scale(0.85);
+  transform-origin: top center;
+  background: transparent;
+  padding:8px;
+  border-radius: 0;
+  max-width: 950px;
+  margin:10px auto; text-align:center;
+  backdrop-filter: blur(4px);
+}
+.schedule-table { width: 100%; width: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+.schedule-table th {
+  padding: 3px 0;
+  font-size: 0.9rem;
+  border-bottom: none;
+}
+.schedule-table td { text-shadow: 0 0 6px #000, 0 0 3px #000;
+  padding: 3px 0;
+  border-bottom: none;
+}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="vignette"></div>
+  <div class="overlay">
+    <div class="container">
+
+      <div class="logo">
+        <div class="mark">FD</div>
+        <div><div style="font-size:15px">Formula Drift</div></div>
+      </div>
+
+      <section class="hero">
+        <div class="eyebrow">Hosted by Formula Drift</div>
+        <h1>Open Track & Drift Day</h1>
+        <p class="lead">A full access track & drift session open to all drivers — experience Mondello Park like never before.</p>
+      </section>
+
+      <div class="card">
+        <h3>Event Info</h3>
+        <div><strong>Date:</strong> 14th December</div>
+        <div><strong>Venue:</strong> Mondello Park</div>
+        <div><strong>Type:</strong> Open Track & Drift Day</div>
+        <div><strong>Host:</strong> Formula Drift</div>
+      </div>
+
+      <div class="card schedule">
+        <h2>Event Schedule — 14 December</h2>
+        <div class="schedule-wrapper"><table class="schedule-table">
+          <tr><th>Time</th><th>Activity</th></tr>
+          <tr><td class="time">08:00 — 09:00</td><td>Registration & Scrutineering</td></tr>
+          <tr><td class="time">09:00 — 09:30</td><td>Drivers' Briefing</td></tr>
+          <tr><td class="time">09:30 — 11:00</td><td>Open Track — Hot Laps</td></tr>
+          <tr><td class="time">11:00 — 12:30</td><td>Drift Practice</td></tr>
+          <tr><td class="time">12:30 — 13:15</td><td>Lunch Break</td></tr>
+          <tr><td class="time">13:15 — 14:45</td><td>Drift Runs — Solo</td></tr>
+          <tr><td class="time">14:45 — 16:00</td><td>Tandem Battles</td></tr>
+          <tr><td class="time">16:00 — 16:30</td><td>Cool Down</td></tr>
+          <tr><td class="time">16:30 — 17:00</td><td>Awards & Wrap-up</td></tr>
+        </table></div>
+      </div>
+
+      <footer>© 2025 • Event Day: 14th December • Mondello Park</footer>
+
+    </div>
+  </div>
+</body>
+</html>
